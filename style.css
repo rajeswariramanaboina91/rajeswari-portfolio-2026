@@ -141,7 +141,7 @@ section {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
     border-radius: 50%;
     display: block;
     margin: 0 auto 20px;
