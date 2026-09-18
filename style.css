@@ -116,26 +116,27 @@ margin-top: 50px;
 }
 
 @media (max-width: 600px) {
-header h1 {
-font-size: 36px;
-}
+    header h1 {
+        font-size: 36px;
+    }
 
-```
-header p {
-    font-size: 17px;
-}
+    header p {
+        font-size: 17px;
+    }
 
-nav a {
-    display: inline-block;
-    margin: 6px;
-}
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
 
-section {
-    margin: 20px 12px;
-    padding: 25px;
-}
-```
+    section {
+        margin: 20px 12px;
+        padding: 25px;
+    }
 
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
 }
 .profile-photo {
     width: 150px;
@@ -161,4 +162,31 @@ section {
 .hero-button:hover {
     background: #dbeafe;
     transform: translateY(-3px);
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 20px;
+    background: #f5f7fb;
+    border-radius: 12px;
+    border-left: 5px solid #2563eb;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+.skill-card p {
+    margin-bottom: 0;
 }
