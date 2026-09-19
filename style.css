@@ -310,3 +310,21 @@ margin-top: 50px;
 .about-card p {
     margin: 12px 0;
 }
+
+header {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.25);
+}
+
+header h1 {
+    letter-spacing: 1px;
+}
+
+header h2 {
+    font-weight: normal;
+}
+
+header p {
+    line-height: 1.8;
+}
