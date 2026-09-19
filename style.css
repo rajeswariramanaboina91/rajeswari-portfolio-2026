@@ -268,3 +268,29 @@ margin-top: 50px;
 .certification-card p {
     margin-bottom: 0;
 }
+.contact-card {
+    padding: 25px;
+    background: #f5f7fb;
+    border-radius: 12px;
+    border-left: 5px solid #2563eb;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-card p {
+    margin: 15px 0;
+}
+
+.contact-card a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
