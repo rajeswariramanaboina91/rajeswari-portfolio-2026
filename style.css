@@ -333,3 +333,131 @@ section h2 {
 section h2 {
     text-align: left !important;
 }
+.about-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.about-card p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+#about h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+@media (max-width: 600px) {
+    .about-card {
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    .about-card p {
+        font-size: 15px;
+    }
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #1e3a8a;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+/* Skills Percentage Dashboard */
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skills-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill:last-child {
+    margin-bottom: 0;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 10px;
+    background: #2563eb;
+}
+
+.python {
+    width: 85%;
+}
+
+.web {
+    width: 80%;
+}
+
+.cyber {
+    width: 80%;
+}
+
+.kali {
+    width: 70%;
+}
+
+.threat {
+    width: 75%;
+}
+
+.network {
+    width: 75%;
+}
+
+@media (max-width: 600px) {
+    .skills-dashboard {
+        margin: 0 10px;
+        padding: 20px;
+    }
+
+    .skill-info {
+        font-size: 14px;
+    }
+}
