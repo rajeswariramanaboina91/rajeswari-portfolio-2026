@@ -427,27 +427,27 @@ nav a:hover {
     background: #2563eb;
 }
 
-.python {
+.progress.python {
     width: 85%;
 }
 
-.web {
+.progress.web {
     width: 80%;
 }
 
-.cyber {
+.progress.cyber {
     width: 80%;
 }
 
-.kali {
+.progress.kali {
     width: 70%;
 }
 
-.threat {
+.progress.threat {
     width: 75%;
 }
 
-.network {
+.progress.network {
     width: 75%;
 }
 
