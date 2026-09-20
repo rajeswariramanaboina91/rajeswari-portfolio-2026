@@ -196,6 +196,13 @@ margin-top: 50px;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+.project-card {
+    padding: 20px;
+    background: #f5f7fb;
+    border-radius: 12px;
+    border-left: 5px solid #2563eb;
+    transition: 0.3s;
+}
 
 .project-card:hover {
     transform: translateY(-5px);
