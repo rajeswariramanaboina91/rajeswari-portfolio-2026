@@ -196,6 +196,7 @@ margin-top: 50px;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+ {
 .project-card {
     padding: 20px;
     background: #f5f7fb;
@@ -203,17 +204,14 @@ margin-top: 50px;
     border-left: 5px solid #2563eb;
     transition: 0.3s;
 }
-
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
-
 .project-card h3 {
     margin-top: 0;
     color: #1e3a8a;
 }
-
 .project-card p {
     margin-bottom: 0;
 }
@@ -229,15 +227,18 @@ margin-top: 50px;
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
-  
-}
-.education-card h3 {
+  .education-card h3 {
     margin-top: 0;
     color: #1e3a8a;
 text-align: left;
 }
 .education-card p {
     margin: 8px 0;
+}
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 .certification-card {
     padding: 20px;
@@ -268,7 +269,9 @@ text-align: left;
     transition: 0.3s;
 }
 
-.contact-card:hover {ow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .certification-card h3 {
