@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Security Log Analyzer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+
+        header {
+            height: 105px;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+            color: white;
+            padding: 22px 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 16px;
+            color: #bfdbfe;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 105px;
+            bottom: 0;
+            width: 265px;
+            background: #0f2747;
+            color: white;
+            padding-top: 25px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 18px 35px;
+            color: #dbeafe;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .sidebar a:hover,
+        .sidebar .active {
+            background: #2563eb;
+        }
+
+        .main {
+            margin-left: 265px;
+            padding: 30px;
+        }
+
+        .upload-box {
+            background: white;
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .upload-box h2 {
+            color: #172554;
+            margin-top: 0;
+        }
+
+        .upload-box p {
+            color: #475569;
+        }
+
+        input[type="file"] {
+            padding: 12px;
+            margin-top: 10px;
+            width: 70%;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 7px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .success-card {
+            border-top: 5px solid #16a34a;
+        }
+
+        .failed-card {
+            border-top: 5px solid #dc2626;
+        }
+
+        .ip-card {
+            border-top: 5px solid #2563eb;
+        }
+
+        .card h2 {
+            color: #172554;
+            font-size: 19px;
+        }
+
+        .number {
+            font-size: 42px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .success-number {
+            color: #059669;
+        }
+
+        .failed-number {
+            color: #dc2626;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .section h2 {
+            color: #172554;
+        }
+
+        .ip-row,
+        .port-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .alert-box {
+            background: #fee2e2;
+            border: 1px solid #f87171;
+            border-left: 7px solid #dc2626;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .alert-box h2 {
+            color: #b91c1c;
+            margin-top: 0;
+        }
+
+        .alert {
+            color: #b91c1c;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .footer {
+            color: #94a3b8;
+            font-size: 13px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main {
+                margin-left: 200px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 20px;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 15px;
+            }
+
+            input[type="file"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🛡️ Network Security Log Analyzer</h1>
+    <p>Security Monitoring Dashboard</p>
+</header>
+
+<div class="sidebar">
+    <a class="active">🏠 Dashboard</a>
+    <a>☁️ Upload Logs</a>
+    <a>📄 Log Analysis</a>
+    <a>⚙️ Settings</a>
+</div>
+
+<div class="main">
+
+    <div class="upload-box">
+        <h2>☁️ Upload Log File</h2>
+
+        <p>Upload a log file to analyze network security events.</p>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <input type="file"
+                   name="logfile"
+                   accept=".txt"
+                   required>
+
+            <button type="submit">🔍 Analyze Log</button>
+
+        </form>
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card success-card">
+            <h2>✓ Successful Logins</h2>
+            <div class="number success-number">
+                {{ successful_logins }}
+            </div>
+        </div>
+
+        <div class="card failed-card">
+            <h2>✕ Failed Logins</h2>
+            <div class="number failed-number">
+                {{ failed_logins }}
+            </div>
+        </div>
+
+        <div class="card ip-card">
+            <h2>🌐 Failed Attempts by IP</h2>
+
+            {% for ip, count in failed_ips.items() %}
+                <div class="ip-row">
+                    <span>{{ ip }}</span>
+                    <strong>{{ count }} attempts</strong>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <div class="section alert-box">
+
+        <h2>🚨 Security Alerts</h2>
+
+        {% for ip, count in failed_ips.items() %}
+
+            {% if count >= 3 %}
+
+                <p class="alert">
+                    🚨 Suspicious IP detected:
+                    {{ ip }}
+                    ({{ count }} failed attempts)
+                </p>
+
+            {% endif %}
+
+        {% endfor %}
+
+    </div>
+
+
+    <div class="section">
+
+        <h2>🔍 Port Activity</h2>
+
+        {% for port, count in port_activity.items() %}
+
+            <div class="port-row">
+                <strong>Port {{ port }}</strong>
+                <span>{{ count }} scan(s)</span>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+
+    <div class="footer">
+        Network Security Log Analyzer v1.0
+    </div>
+
+</div>
+
+</body>
+</html>
